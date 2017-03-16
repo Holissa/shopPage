@@ -11,6 +11,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
     <script src="home-controller.js"></script>
+
+    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
 </head>
 <body ng-app="myApp">
 <div class="container" ng-controller="homeController">
@@ -24,35 +27,33 @@
             <span> Бесплатно по России </span>
         </div>
 
-        <div style="width: 30%;float: right; padding: 2%;">
+        <div style="width: 60%;float: right; padding: 2%;">
             <div style="float: right">
-                <button type="button" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-heart" style="font-size:35px; color: black"></span>
-                </button>
-            </div>
-
-            <div style="float: right">
-                <button type="button" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-shopping-cart" style="font-size:35px; color: black"></span>
-                </button>
+                <span class="glyphicon glyphicon-shopping-cart" style="font-size:35px; color: black"></span>
                 0 р
             </div>
+
+            <div style="float: right; margin-right: 25px;">
+                <span class="glyphicon glyphicon-heart" style="font-size:35px; color: black"></span>
+            </div>
+
+
         </div>
 
-        <div style="width: 20%; padding: 2%;">
-            <button type="button" class="btn btn-default btn-sm">
+        <div style=" padding: 2%; float: right; width: 13%;">
+            <div style="float: right">
                 <span class="glyphicon glyphicon-user" style="font-size:35px; color: black"></span>
-            </button>
-            Войти
+                <a href="">Войти</a>
+            </div>
         </div>
 
     </div>
     <!------------------------------------------------------------------ END HEADER ---------------------------------------------------------------------->
 
 
-    <div style="display:flex; width: 100%;  background-color: #dedede;  padding: 2%; margin-top: 2%;">
-        <div ng-repeat="item in items" style="width: 10%;">
-            {{item}}
+    <div style="display:flex; width: 100%;  background-color: #dedede;  padding: 1%; margin-top: 0.5%; text-align: center">
+        <div ng-repeat="item in items" style="width: 16.5%; font-size: 20px">
+            <strong>{{item}}</strong>
         </div>
     </div>
 
@@ -76,24 +77,41 @@
 
     <!--------------------------------------------------------------- START VIEW ------------------------------------------------------------------------>
 
-    <div style="margin-top: 10%; display: flex">
-        <div style="display: inline-block;">
-            <img src="images/pic1.jpg" style="width: 20%; height: 25%; display: block; margin-bottom: 2%"
-                 ng-click="changeImage($event)">
-            <img src="images/pic2.jpg" style="width: 20%; height: 25%; display: block; margin-bottom: 2%"
-                 ng-click="changeImage($event)">
-            <img src="images/pic3.jpg" style="width: 20%; height: 25%; display: block; margin-bottom: 2%"
-                 ng-click="changeImage($event)">
+    <div style="margin-top: 5%; display: flex; ">
+        <div style="display: inline-block; width: 5%;">
+            <img src="images/pic1.jpg" class="shoesPic" ng-click="changeImage($event)">
+
+            <img src="images/pic2.jpg" class="shoesPic" ng-click="changeImage($event)">
+            <img src="images/pic3.jpg" class="shoesPic" ng-click="changeImage($event)">
+            <span class="glyphicon glyphicon-play-circle" style="font-size:35px; color: black"></span>
+        </div>
+        <div style="width: 35%;">
+            <!--<div style="width: 300px; height: 450px; background-color: grey; margin: auto"></div>-->
+            <img src="images/{{urlImg}}.jpg" style="width: 300px; height: 450px; margin: auto">
         </div>
         <div>
-            <div style="width: 190px; height: 300px; background-color: grey;"></div>
-        </div>
-        <div>
-            <p>sdasdasdsd</p>
+            <h2><strong>Saint Laurent</strong></h2>
+            <h2>Босоножки Bianca</h2>
+            <p>Таблица размеров</p>
+            <select>
+                <option disabled selected>Количество</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <p> 35 250 Р</p>
+            <div style="width: 15%;">
+                <button type="button" class="btn btn-primary btn-lg btn-block">Купить</button>
+            </div>
+            <p>Описание</p>
+            <p>Эдди Слиман обновил классические для марки, основанной Ивом Сен-Лораном босоножки Biaca. Ярко-розовая
+                модель с ремешком
+                на щиколотке, открытой пяткой и переплетенными крест-накрест ремешками выполнена из глянцевой кожи.</p>
         </div>
     </div>
 
 
 </div>
+
 </body>
 </html>

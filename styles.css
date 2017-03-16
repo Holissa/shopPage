@@ -14,3 +14,10 @@
     height: 100px;
     background-color: #dedede;
 }
+
+.shoesPic {
+    width: 65px;
+    height: 83px;
+    display: block;
+    margin-bottom: 2%;
+}
