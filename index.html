@@ -5,113 +5,60 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/view.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
     <script src="home-controller.js"></script>
-
-    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
-    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+    <script src="js/functional.js"></script>
 </head>
+
 <body ng-app="myApp">
+
 <div class="container" ng-controller="homeController">
 
     <!------------------------------------------------------------------ START HEADER ---------------------------------------------------------------------->
-    <div class="header">
-        <div class="logo"></div>
-
-        <div style="width: 15%; padding: 2%;">
-            <span>8 (800) 654 33 73</span></br>
-            <span> Бесплатно по России </span>
-        </div>
-
-        <div style="width: 60%;float: right; padding: 2%;">
-            <div style="float: right">
-                <span class="glyphicon glyphicon-shopping-cart" style="font-size:35px; color: black"></span>
-                0 р
-            </div>
-
-            <div style="float: right; margin-right: 25px;">
-                <span class="glyphicon glyphicon-heart" style="font-size:35px; color: black"></span>
-            </div>
-
-
-        </div>
-
-        <div style=" padding: 2%; float: right; width: 13%;">
-            <div style="float: right">
-                <span class="glyphicon glyphicon-user" style="font-size:35px; color: black"></span>
-                <a href="">Войти</a>
-            </div>
-        </div>
-
-    </div>
+    <div class="b-header" ng-include src="'components/header.html'"></div>
     <!------------------------------------------------------------------ END HEADER ---------------------------------------------------------------------->
 
 
-    <div style="display:flex; width: 100%;  background-color: #dedede;  padding: 1%; margin-top: 0.5%; text-align: center">
+
+    <!------------------------------------------------------------------ START MENU ---------------------------------------------------------------------->
+    <div class="b-menu">
         <div ng-repeat="item in items" style="width: 16.5%; font-size: 20px">
             <strong>{{item}}</strong>
         </div>
     </div>
 
-    <div style="display:flex; width: 30%;  margin-top: 1%; float: left;">
-        <div>
-            <a href="">Главная > </a>
+    <div class="b-sub-menu">
+        <div ng-repeat="subname in subnames">
+            <a href="" style="text-decoration: underline"> {{subname}} <span class="glyphicon glyphicon-menu-right sub-link"></span></a>
         </div>
-        <div>
-            <a href=""> Женское > </a>
-        </div>
-        <div>
-            <a href=""> Обувь > </a>
-        </div>
-        <div>
-            <a href=""> Босоножки</a>
-        </div>
-
-
     </div>
+    <!------------------------------------------------------------------ END MENU ---------------------------------------------------------------------->
+
 
 
     <!--------------------------------------------------------------- START VIEW ------------------------------------------------------------------------>
-
-    <div style="margin-top: 5%; display: flex; ">
-        <div style="display: inline-block; width: 5%;">
-            <img src="images/pic1.jpg" class="shoesPic" ng-click="changeImage($event)">
-
-            <img src="images/pic2.jpg" class="shoesPic" ng-click="changeImage($event)">
-            <img src="images/pic3.jpg" class="shoesPic" ng-click="changeImage($event)">
-            <span class="glyphicon glyphicon-play-circle" style="font-size:35px; color: black"></span>
-        </div>
-        <div style="width: 35%;">
-            <!--<div style="width: 300px; height: 450px; background-color: grey; margin: auto"></div>-->
-            <img src="images/{{urlImg}}.jpg" style="width: 300px; height: 450px; margin: auto">
-        </div>
-        <div>
-            <h2><strong>Saint Laurent</strong></h2>
-            <h2>Босоножки Bianca</h2>
-            <p>Таблица размеров</p>
-            <select>
-                <option disabled selected>Количество</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-            <p> 35 250 Р</p>
-            <div style="width: 15%;">
-                <button type="button" class="btn btn-primary btn-lg btn-block">Купить</button>
-            </div>
-            <p>Описание</p>
-            <p>Эдди Слиман обновил классические для марки, основанной Ивом Сен-Лораном босоножки Biaca. Ярко-розовая
-                модель с ремешком
-                на щиколотке, открытой пяткой и переплетенными крест-накрест ремешками выполнена из глянцевой кожи.</p>
-        </div>
-    </div>
+    <div class="b-view" ng-include src="'components/view.html'"></div>
+    <!--------------------------------------------------------------- END VIEW ------------------------------------------------------------------------>
 
 
 </div>
+
+
+
+<!--------------------------------------------------------------- START POPUP ------------------------------------------------------------------------>
+<div class="b-popup" id="modal-window" style="visibility: hidden">
+    <div class="b-popup-content">
+        <p onclick="closeModal()" style="float: right">X close</p>
+        <p>Таблица размеров</p>
+    </div>
+</div>
+<!--------------------------------------------------------------- END POPUP ------------------------------------------------------------------------>
 
 </body>
 </html>

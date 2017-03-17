@@ -1,0 +1,41 @@
+<div style="display: inline-block; width: 10%;">
+    <img src="images/pic1.jpg" class="shoesPic active" ng-click="changeImage($event)">
+    <img src="images/pic2.jpg" class="shoesPic" ng-click="changeImage($event)">
+    <img src="images/pic3.jpg" class="shoesPic" ng-click="changeImage($event)">
+    <div class="shoesPic" ng-click="changeVideo($event)" style="text-align: center;">
+        <span class="glyphicon glyphicon-play-circle black-icon">
+            <span style="font-size: 16px">Видео</span>
+        </span>
+    </div>
+</div>
+
+<div id="shoesImage">
+    <img src="images/{{urlImg}}.jpg" class="bigImage">
+</div>
+
+<div id="shoesVideo">
+    <video id="videoTag" width="390" height="530" controls="controls" autoplay>
+        <source src="images/video1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+</div>
+
+<div>
+    <p class="brandName"><strong>Saint Laurent</strong></p>
+    <p class="modelName">Босоножки Bianca</p>
+    <p class="tableSize" onclick="modalActive()">
+        Таблица размеров</p>
+    <select id="selectVal" style="margin: 0 0 20px 0;" onchange="testChange()">
+        <option disabled selected>Количество</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+    <p style="margin: 0 0 20px 0; font-size: 25px"> 35 250 Р</p>
+    <div style="width: 15%; margin: 0 0 20px 0;">
+        <button id="butBuy" type="button" class="btn btn-primary btn-lg btn-block">Купить</button>
+    </div>
+    <p style="text-transform: uppercase; color: grey">Описание</p>
+    <p>Эдди Слиман обновил классические для марки, основанной Ивом Сен-Лораном босоножки Biaca. Ярко-розовая
+        модель с ремешком
+        на щиколотке, открытой пяткой и переплетенными крест-накрест ремешками выполнена из глянцевой кожи.</p>
+</div>
