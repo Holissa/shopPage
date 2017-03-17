@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e8c4794-9f65-476b-b320-7bdaa99de4a0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/styles.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pic1.jpg" afterPath="$PROJECT_DIR$/images/pic1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pic2.jpg" afterPath="$PROJECT_DIR$/images/pic2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pic3.jpg" afterPath="$PROJECT_DIR$/images/pic3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home-controller.js" afterPath="$PROJECT_DIR$/home-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="5e8c4794-9f65-476b-b320-7bdaa99de4a0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -273,7 +265,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/z" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -371,12 +363,12 @@
       <workItem from="1489751141403" duration="1934000" />
       <workItem from="1489753088046" duration="1755000" />
       <workItem from="1489754907090" duration="1818000" />
-      <workItem from="1489756755489" duration="850000" />
+      <workItem from="1489756755489" duration="1792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32028000" />
+    <option name="totallyTimeSpent" value="32970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
